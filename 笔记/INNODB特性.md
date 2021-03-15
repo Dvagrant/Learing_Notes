@@ -1,5 +1,14 @@
 ## WAL技术（write-ahead logging）
 
+---
+
+## CHECKPOINT
+- `sharp checkpoint`：数据库关闭时，所有脏页需要刷回磁盘
+- `fuzzy checkpoint`：触发条件后按一定比例刷回磁盘
+	- `master thread checkpoint`（定时刷
+	- `flush_lru_list checkpoint`（保证 LRU 中有100页可用
+	- `Async/Sync flush checkpoint`（redo log 占满
+	- `dirty page too mucn point`（内存不足
 
 
 ---
